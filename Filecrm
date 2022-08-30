@@ -1,0 +1,27 @@
+package Basic;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class GetPage {
+	public static void  main(String[] args)
+	{
+	System.setProperty("webdriver.chrome.driver","./drivers/chromedriver.exe");
+	ChromeDriver driver = new ChromeDriver();
+	driver.get("https://www.amazon.in/");
+	String expectedpagesource = "Amazon";
+	String actualpagesource = driver.getPageSource();
+	//System.out.println(element);
+	
+	if(actualpagesource.contains(expectedpagesource)) 
+	{
+		System.out.println("Pass: pagesource is present");
+	}
+	else 
+	{
+		System.out.println("Fail: pagesource is not present");
+	}
+	
+}
+	
+	
+
+}
+
