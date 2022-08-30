@@ -8,7 +8,7 @@ public class GetPage {
 	driver.get("https://www.amazon.in/");
 	String expectedpagesource = "Amazon";
 	String actualpagesource = driver.getPageSource();
-	//System.out.println(element);
+	
 	
 	if(actualpagesource.contains(expectedpagesource)) 
 	{
