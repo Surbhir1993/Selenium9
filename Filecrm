@@ -13,11 +13,6 @@ public class GetPage {
 	if(actualpagesource.contains(expectedpagesource)) 
 	{
 		System.out.println("Pass: pagesource is present");
-	}
-	else 
-	{
-		System.out.println("Fail: pagesource is not present");
-	}
 	
 }
 	
