@@ -1,0 +1,38 @@
+package Assertion;
+
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Hardassert {
+@Test 
+public void actit() {
+WebDriver driver = new ChromeDriver();
+driver.manage().window().maximize();
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+driver.get("https://demo.actitime.com/login.do");
+
+String title = driver.getTitle();
+System.out.println(title);
+String actualtitle = driver.getTitle();
+String expectedtitle = "actiTIME - Login1";
+Assert.assertEquals(actualtitle, expectedtitle);
+System.out.println(actualtitle);
+}
+
+
+public void FB2()
+{
+	WebDriver driver = new ChromeDriver();
+	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	
+	driver.get("https://demo.actitime.com/login.do/");
+	
+	String URL = driver.getCurrentUrl();
+	System.out.println(URL);
+}
+}
