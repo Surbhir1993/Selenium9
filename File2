@@ -34,5 +34,6 @@ public void FB2()
 	
 	String URL = driver.getCurrentUrl();
 	System.out.println(URL);
+	aasssd
 }
 }
